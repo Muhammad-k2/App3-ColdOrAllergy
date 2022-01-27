@@ -49,11 +49,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	
-	function getResults(){
-		var newResults= document.getElementById("results-section")
-		var allergyPercent = 100 * ((allergy_count)/(allergy_count + cold_count));
-		var coldPercent = 100 * ((cold_count)/(allergy_count + cold_count));
-		newResults.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+	function GetResults(){ /* I added a Results function so that the results will actually show up on the result page. */
+		var allergyPercent = ((allergy_count)/(allergy_count + cold_count)) *100; /* I added a variable to make a percentage for allergies. */
+		var coldPercent = ((cold_count)/(allergy_count + cold_count)) *100; /* I added a variable to make a percentage for cold. */
+		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; /* I added percentages IN quotations so that they will show up after the results. */
 	}
 */removed var from 54. changed results function name */ 
   </script>
@@ -176,22 +175,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <!--____________________________________adding results section under this for testing______________________________________________________________________________-->	
 
-<div class="page" id="results"> 
-	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Results</h1> 
+<div class="page" id="seven"> 
+		<h1>Results</h1>
 	</div>
 	
-	<a href="#results" onclick="getResults();" class="w3-btn w3-grey w3-round"> Tester 6 </a> 
-
+	<div id="content" class="w3-container">
+		<p id="results"> </p>  
 	
-	<p id="results-section"></p>.
- 	
-
-    	</div>
-	
+	<a onclick="GetResults();" class="w3-button w3-hover-indigo w3-round"> Results </a> 
+	</div> 
+	</div> 
 </div>
-<!--fixed entire section of code for results. created function getResults and button to call the function and display the results-->
-	
 	
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
