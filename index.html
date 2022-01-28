@@ -49,10 +49,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 	
-	function GetResults(){ /* I added a Results function so that the results will actually show up on the result page. */
-		var allergyPercent = ((allergy_count)/(allergy_count + cold_count)) *100; /* I added a variable to make a percentage for allergies. */
-		var coldPercent = ((cold_count)/(allergy_count + cold_count)) *100; /* I added a variable to make a percentage for cold. */
-		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; /* I added percentages IN quotations so that they will show up after the results. */
+	function GetResults(){
+		var allergyPercent = ((allergy_count)/(allergy_count + cold_count)) *100;
+		var coldPercent = ((cold_count)/(allergy_count + cold_count)) *100;
+		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
 	}
 */removed var from 54. changed results function name */ 
   </script>
