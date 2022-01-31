@@ -40,18 +40,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 
 
-        function allergyAdd(){
+        function allergyAdd(){ /*function to get keep track of the answers that are symptoms of allergies*/
             allergy_count = allergy_count + 1;
 
         }
 
-        function coldAdd(){
+        function coldAdd(){ /*function to get keep track of the answers that are symptoms of a cold*/
             cold_count = cold_count + 1;
         }
 	
 	function GetResults(){ /*function to get keep track of the allergy percentage and cold percentage*/
-		var allergyPercent = ((allergy_count)/(allergy_count + cold_count)) *100;
-		var coldPercent = ((cold_count)/(allergy_count + cold_count)) *100;
+		var allergyPercent = ((allergy_count)/(allergy_count + cold_count)) *100; /*variable to calculate the probability of it being allergies*/
+		var coldPercent = ((cold_count)/(allergy_count + cold_count)) *100; /*variable to calculate the probability of it being a cold*/
 		document.getElementById("results").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
 	}
 /*removed var from 54. changed results function name */ 
@@ -177,17 +177,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="results">
 	<div id="content" class="w3-container">
-		<h1>Results</h1>
+		<h1>Results</h1> 
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p id="results"> </p>  
 	
 	<a onclick="GetResults();" class="w3-btn w3-black"> Results 1 </a> 
-	</div> 
-	
+	</div> 	
 </div>
-	
+<!--results page. Has a results header and a button, that when pressed will display the probability of the user having a cold or allergies-->	
+		
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
